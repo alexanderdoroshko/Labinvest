@@ -1,0 +1,19 @@
+package by.labinvent.monitorsensors.repository.entity;
+
+import javax.persistence.*;
+
+@MappedSuperclass
+public class BaseEntity {
+    protected int id;
+
+    @Id
+    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+}
